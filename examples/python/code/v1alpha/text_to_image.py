@@ -34,7 +34,7 @@ headers = {
 response = requests.post(url, json=payload, headers=headers)
 
 if response.status_code != 200:
-    raise Exception("Non-200 response: " + str(response.text))
+    raise Exception(f"Non-200 response: {response.text}")
 
 # Write the bytes from response.content to a file
 with open(output_file, "wb") as f:

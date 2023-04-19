@@ -13,7 +13,7 @@ response = requests.get(url, headers={
 })
 
 if response.status_code != 200:
-    raise Exception("Non-200 response: " + str(response.text))
+    raise Exception(f"Non-200 response: {response.text}")
 
 # Do something with the payload...
 payload = response.json()

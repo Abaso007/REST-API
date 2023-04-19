@@ -23,7 +23,7 @@ response = requests.post(
 )
 
 if response.status_code != 200:
-    raise Exception("Non-200 response: " + str(response.text))
+    raise Exception(f"Non-200 response: {response.text}")
 
-with open(f"./out/v1_upscaled_image.png", "wb") as f:
+with open("./out/v1_upscaled_image.png", "wb") as f:
     f.write(response.content)
